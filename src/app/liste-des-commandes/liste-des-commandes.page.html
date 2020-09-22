@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>liste-des-commandes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let commande of listesCommandes">
+    <ion-item>
+      n°commande: {{commande.id}} <br>
+      client : {{commande.Nomclient}} /n°Tel: {{commande.Telclient}}<br>
+      commande: {{commande.Nomplat}}  <br>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,23 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button>Back</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      <ion-input type="text" formControlName="prenom" placeholder="prenom"></ion-input> <br>
+      <ion-input type="text" formControlName="nom" placeholder="nom"></ion-input> <br>
+      <ion-input type="number" formControlName="Tel" placeholder="Telephone"></ion-input> <br>
+      <ion-input type="text" formControlName="login" placeholder="nom d'utilisateur"></ion-input> <br>
+      <ion-input type="email" formControlName="email" placeholder="e-mail"></ion-input> <br>
+      <ion-input type="password" formControlName="pwd" placeholder="mot de passe"></ion-input>  <br> <br>
+      <ion-button type="submit" [disabled]="!signUpForm.valid">Creer mon compte</ion-button> 
+    </form>
+  </div>
+</ion-content>

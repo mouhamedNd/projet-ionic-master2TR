@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mon Compte</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button>Back</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item>
+    <ion-avatar slot="start">
+      <img [src]="url"/> 
+    </ion-avatar>
+
+<ion-label>Bienvenue {{user.NOM}} <br> <br> 
+    {{user.Telephone}} <br> <br>
+    {{user.email}} </ion-label>
+</ion-item>
+  <br> <br>
+ <ion-card>
+  <ion-card-header>
+    <ion-card-title>Modifier profil</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-icon name="camera-outline" (click)="takePicture()"></ion-icon>
+  </ion-card-content>
+</ion-card>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Changer mot de passe</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <form [formGroup]="changePwdForm" (ngSubmit)="submitPwdForm()">
+          <ion-input type="password" formControlName="ancienPwd">ancien mot de passe</ion-input>
+          <ion-input type="password" formControlName="nouveauPwd">nouveau mot de passe</ion-input>
+          <ion-button type="submit">Valider</ion-button>
+          </form>
+        
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
